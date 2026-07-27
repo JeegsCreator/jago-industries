@@ -39,20 +39,27 @@ const { thumbnail, title, src, jobs } = Astro.props;
 
 <script>
   // Runs once for the page, but sets up every instance
+
   document.querySelectorAll(".dialog").forEach((dialog) => {
     if (!(dialog instanceof HTMLDialogElement)) return;
     console.log("found dialog");
+
+    const video = dialog.querySelector("video");
+
+    setInterval(() => {
+      if (!dialog.open) {
+        if (video) video.pause();
+      }
+    }, 500);
 
     // find the trigger that belongs to THIS dialog
     const trigger = dialog.previousElementSibling;
     trigger?.addEventListener("click", () => {
       dialog.showModal();
-      const video = dialog.querySelector("video");
       if (video) video.play();
     });
 
     dialog.addEventListener("click", (e) => {
-      const video = dialog.querySelector("video");
       if (video) video.pause();
       if (e.target === dialog) dialog.close();
     });

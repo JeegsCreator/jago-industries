@@ -1,11 +1,106 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Button from "../components/Button.astro";
+import CameraImage from "../assets/camera.png";
+import Proyects from "../components/Proyects.astro";
+import PP from "../assets/pp.jpeg";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <section class="container mx-auto h-[90vh] lg:h-[80vh] z-10 relative">
+    <header>
+      <ul class="flex justify-center gap-14 py-5">
+        <li>
+          <a href="#perfil">Perfil</a>
+        </li>
+        <li>
+          <a href="#proyectos">Proyectos</a>
+        </li>
+        <li>
+          <a href="#contacto">Contacto</a>
+        </li>
+      </ul>
+    </header>
+    <main class="h-full flex justify-center items-center">
+      <div>
+        <h1 class="text-8xl lg:text-[10rem] leading-[80%]">
+          JAIDER <br /> GARCIA.
+        </h1>
+        <p class="text-lg lg:text-3xl">
+          Productor audiovisual y editor de video.
+        </p>
+        <div class="flex flex-col lg:flex-row gap-2 mt-3">
+          <Button href="#proyectos">Ve mi trabajo</Button>
+          <Button href="https://wa.me/573212806213" target="_blank"
+            >Whatsapp</Button
+          >
+        </div>
+      </div>
+      <picture class="hidden lg:block">
+        <img
+          src={CameraImage.src}
+          alt="Camara de video"
+          class="h-[63vh] opacity-0"
+        />
+        <img
+          src={CameraImage.src}
+          alt="Camara de video"
+          class="h-[63vh] absolute bottom-0"
+        />
+      </picture>
+    </main>
+  </section>
+  <div class="border-t-16 border-jago-yellow bg-black z-100" id="perfil">
+    <section
+      class="container mx-auto lg:py-0 py-20 min-h-[80vh] text-white flex gap-20 items-center px-8 md:px-35"
+    >
+      <div>
+        <h2 class="text-5xl lg:text-7xl text-jago-yellow mb-6">
+          PERFIL PROFESIONAL
+        </h2>
+        <p class="text-base lg:text-lg">
+          Me especializo en <strong>producir y editar</strong> contenido y en diseñar
+          <strong>estrategias de marketing</strong> para redes sociales y medios de
+          comunicación, con el objetivo de <strong>potenciar la marca</strong>,
+          atraer nuevos clientes potenciales y <strong
+            >convertir vistas en ventas.</strong
+          >
+          <br />
+          <br />
+          Esto lo logro creando contenido en formato de <strong
+            >video y fotografía profesional,</strong
+          > todo ello basado en una <strong>estrategia</strong> de marketing diseñada
+          en torno a las <strong>necesidades de la marca,</strong> de su público objetivo
+          y de su potencial.
+        </p>
+      </div>
+      <picture class="w-175 aspect-square">
+        <img src={PP.src} alt="Jaider Garcia" />
+      </picture>
+    </section>
+  </div>
+  <Proyects />
+  <div class="bg-black text-white" id="contacto">
+    <footer
+      class="container mx-auto flex-col justify-center py-20 px-8 lg:px-25"
+    >
+      <h2 class="text-jago-yellow text-5xl lg:text-7xl">CONTACTO</h2>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-1 text-lg w-fit mt-3"
+      >
+        <a href="https://wa.me/573212806213" target="_blank">Whatsapp</a>
+        <span>jaidergarcia.audiovisual@gmail.com</span>
+        <a href="https://www.instagram.com/jago01800/" target="_blank"
+          >@jago01800</a
+        >
+        <a
+          href="https://web.facebook.com/profile.php?id=61591753867248"
+          target="_blank">Jago Garcia</a
+        >
+      </div>
+    </footer>
+  </div>
 </Layout>

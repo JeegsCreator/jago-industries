@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "title": "Desfile de Carrozas | Reinado La Dorada, Caldas",
+      "jobs": ["Editor", "Filmmaker"],
+      "thumbnail": "https://res.cloudinary.com/sge2tn0w/video/upload/v1785132779/As%C3%AD_se_vivi%C3%B3_el_desfile_de_carrozas_de_las_candidatas_a_se%C3%B1orita_La_Dorada____ladoradacaldas_%EF%B8%8F__momentosinolvidables__reina__ladoradaenamora_M_vlqltw.jpg",
+      "src": "https://res.cloudinary.com/sge2tn0w/video/upload/v1785132779/As%C3%AD_se_vivi%C3%B3_el_desfile_de_carrozas_de_las_candidatas_a_se%C3%B1orita_La_Dorada____ladoradacaldas_%EF%B8%8F__momentosinolvidables__reina__ladoradaenamora_M_vlqltw.mp4"
+    },
+    {
+      "title": "Danza Urbana | Contenido para redes sociales",
+      "jobs": ["Filmmaker"],
+      "thumbnail": "https://res.cloudinary.com/sge2tn0w/video/upload/v1785132778/Fui_por_comida_y_termin%C3%A9_bailando_en_los_pasillos_del_supermercado____grajalesupermercados____jago01800___Alienz_vs_monsterz____parat%C3%AD__ba_hycyyr.jpg",
+      "src": "https://res.cloudinary.com/sge2tn0w/video/upload/v1785132778/Fui_por_comida_y_termin%C3%A9_bailando_en_los_pasillos_del_supermercado____grajalesupermercados____jago01800___Alienz_vs_monsterz____parat%C3%AD__ba_hycyyr.mp4"
+    },
+    {
+      "title": "Academia de Baile | Video demonstrativo",
+      "jobs": ["Editor", "Filmmaker"],
+      "thumbnail": "https://res.cloudinary.com/sge2tn0w/video/upload/v1785132778/Hoy_no_es_un_viernes_normal___estoy_por_empezar_un_nuevo_proyecto_y_quiero_tener_testigos_en_este_proceso_por_eso_valoro_los_primeros_que_creen_sin_ver_lo_qu_kz1xxp.jpg",
+      "src": "https://res.cloudinary.com/sge2tn0w/video/upload/v1785132778/Hoy_no_es_un_viernes_normal___estoy_por_empezar_un_nuevo_proyecto_y_quiero_tener_testigos_en_este_proceso_por_eso_valoro_los_primeros_que_creen_sin_ver_lo_qu_kz1xxp.mp4"
+    },
+    {
+      "title": "Video Comercial Hamburguesa Artesanal",
+      "jobs": ["Editor"],
+      "thumbnail": "https://res.cloudinary.com/sge2tn0w/video/upload/v1785132779/Video_de_Producto_Gastron%C3%B3mico_720P_HD_wuoxyq.jpg",
+      "src": "https://res.cloudinary.com/sge2tn0w/video/upload/v1785132779/Video_de_Producto_Gastron%C3%B3mico_720P_HD_wuoxyq.mp4"
+    },
+    {
+      "title": "JGarcia Producciones | Muestra para Redes Sociales",
+      "jobs": ["Editor", "Filmmaker"],
+      "thumbnail": "https://res.cloudinary.com/sge2tn0w/video/upload/v1785132781/JGARCIA_PRODUCCIONES_izegnf.jpg",
+      "src": "https://res.cloudinary.com/sge2tn0w/video/upload/v1785132781/JGARCIA_PRODUCCIONES_izegnf.mp4"
+    },
+    {
+      "title": "Felo DJ | Contenido para redes sociales",
+      "jobs": ["Editor", "Filmmaker"],
+      "thumbnail": "https://res.cloudinary.com/sge2tn0w/video/upload/v1785132780/FELODJ_V1_jpcic8.jpg",
+      "src": "https://res.cloudinary.com/sge2tn0w/video/upload/v1785132780/FELODJ_V1_jpcic8.mp4"
+    }
+  ]
+}

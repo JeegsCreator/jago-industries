@@ -1,0 +1,27 @@
+---
+import data from "../projects-data.json";
+import ProyectDialog from "./Proyect-dialog.astro";
+---
+
+<section
+  class="container mx-auto min-h-[80vh] flex flex-col justify-center px-5 md:px-25 py-26"
+  id="proyectos"
+>
+  <header class="flex justify-center lg:justify-start">
+    <h2 class="text-5xl lg:text-7xl bg-jago-yellow py-2 px-6 w-min">
+      PROYECTOS
+    </h2>
+  </header>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-5 gap-y-8 mt-9">
+    {
+      data.projects.map((project, i) => (
+        <ProyectDialog
+          thumbnail={project.thumbnail}
+          title={project.title}
+          src={project.src}
+          jobs={project.jobs}
+        />
+      ))
+    }
+  </div>
+</section>

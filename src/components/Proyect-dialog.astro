@@ -1,0 +1,79 @@
+---
+import PlayFill from "./icons/play-fill.astro";
+
+interface Props {
+  thumbnail: string;
+  src: string;
+  title: string;
+  jobs: string[];
+}
+
+const { thumbnail, title, src, jobs } = Astro.props;
+---
+
+<div id="open-video-dialog" class="flex flex-col gap-1">
+  <div class="relative cursor-pointer">
+    <img
+      src={thumbnail}
+      alt={title}
+      class="w-full h-full aspect-video bg-zinc-300 object-cover brightness-50 rounded-md"
+    />
+    <div
+      class="absolute bottom-1/2 right-1/2 translate-[50%] flex size-20 bg-white p-4 rounded-full text-black justify-center items-center"
+    >
+      <PlayFill />
+    </div>
+  </div>
+  <div>
+    <h3 class="text-2xl font-normal! cursor-pointer leading-none">{title}</h3>
+    <div class="flex gap-2 mt-1">
+      {jobs.map((job) => <span class="text-zinc-700 leading-none">{job}</span>)}
+    </div>
+  </div>
+</div>
+<dialog class="dialog">
+  <div class="flex">
+    <video src={src} controls class="max-w-[95vw] max-h-[95vh]"></video>
+  </div>
+</dialog>
+
+<script>
+  // Runs once for the page, but sets up every instance
+  document.querySelectorAll(".dialog").forEach((dialog) => {
+    if (!(dialog instanceof HTMLDialogElement)) return;
+    console.log("found dialog");
+
+    // find the trigger that belongs to THIS dialog
+    const trigger = dialog.previousElementSibling;
+    trigger?.addEventListener("click", () => {
+      dialog.showModal();
+      const video = dialog.querySelector("video");
+      if (video) video.play();
+    });
+
+    dialog.addEventListener("click", (e) => {
+      const video = dialog.querySelector("video");
+      if (video) video.pause();
+      if (e.target === dialog) dialog.close();
+    });
+  });
+</script>
+
+<style>
+  dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    margin: 0;
+    max-height: 95vh;
+    max-width: 95vw;
+    border-radius: 1rem;
+  }
+
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.767);
+    backdrop-filter: blur(8px);
+  }
+  /* animation on open/close needs the [open] + display:none trick or the new @starting-style */
+</style>
